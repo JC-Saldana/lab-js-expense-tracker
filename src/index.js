@@ -41,6 +41,7 @@ class Budget {
     addEntry(newEntry) {
         this.entries.push(newEntry)
     }
+
     getCurrentBalance() {
         if (this.entries.length === 0) return 0
         let income = 0
@@ -54,6 +55,7 @@ class Budget {
         });
         return income - expenses
     }
+
     getFormattedEntries() {
         const updatedEntries = []
         this.entries.forEach(entry => {
@@ -65,4 +67,5 @@ class Budget {
         });
         return updatedEntries
     }
+
 }
